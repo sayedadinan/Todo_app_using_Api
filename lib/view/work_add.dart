@@ -70,7 +70,6 @@ class _AddtodoState extends State<Addtodo> {
   editedData() async {
     final todo = widget.todo;
     if (todo == null) {
-      print('yoiu can not call updated without todo data');
       return;
     }
     final id = todo['_id'];

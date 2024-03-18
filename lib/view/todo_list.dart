@@ -31,7 +31,7 @@ class _TodoListpageState extends State<TodoListpage> {
       body: Visibility(
         visible: isloading,
         child: Center(
-          child: CircularProgressIndicator(),
+          child: const CircularProgressIndicator(),
         ),
         replacement: RefreshIndicator(
           onRefresh: fetchtodo,
@@ -85,9 +85,7 @@ class _TodoListpageState extends State<TodoListpage> {
       setState(() {
         items = filters;
       });
-    } else {
-      print('deletion failed');
-    }
+    } else {}
   }
 
   Future<void> fetchtodo() async {
