@@ -88,10 +88,8 @@ class _AddtodoState extends State<Addtodo> {
       headers: {'Content-Type': 'application/json'},
     );
     if (response.statusCode == 200) {
-      print('Updation success ');
       showSuccessMessage('Updation Success');
     } else {
-      print('error');
       showerrorMessage('updation Failed');
     }
   }
@@ -114,13 +112,10 @@ class _AddtodoState extends State<Addtodo> {
     if (response.statusCode == 201) {
       titlecontroller.text = '';
       descriptioncontroller.text = '';
-      print('success');
       showSuccessMessage('Creation Success');
     } else {
-      print('error');
       showerrorMessage('its not adding successfully');
     }
-    print(response.body);
   }
 
   void navigatetohomepage(BuildContext context) async {
