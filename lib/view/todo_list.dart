@@ -13,7 +13,6 @@ class TodoListpage extends StatefulWidget {
 class _TodoListpageState extends State<TodoListpage> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     fetchtodo();
   }

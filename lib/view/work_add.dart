@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:todo_api/view/todo_list.dart';
@@ -18,7 +17,6 @@ class _AddtodoState extends State<Addtodo> {
   bool isEdit = false;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     final todo = widget.todo;
     if (todo != null) {
@@ -107,7 +105,7 @@ class _AddtodoState extends State<Addtodo> {
       "description": description,
       "is_completed": false,
     };
-    final url = 'https://api.nstack.in/v1/todos';
+    const url = 'https://api.nstack.in/v1/todos';
     final uri = Uri.parse(url);
     final response = await http.post(
       uri,
@@ -131,8 +129,7 @@ class _AddtodoState extends State<Addtodo> {
     await Navigator.pushAndRemoveUntil(
       context,
       route,
-      (route) =>
-          false, // This predicate function ensures that all routes are removed
+      (route) => false,
     );
   }
 
